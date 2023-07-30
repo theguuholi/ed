@@ -1,10 +1,8 @@
 package com.ed.ed.modules.courses.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ed.ed.modules.courses.entities.Course;
-import com.ed.ed.modules.courses.repositories.CourseJpaRepository;
 import com.ed.ed.modules.courses.repositories.ICourseRepository;
 
 @Service

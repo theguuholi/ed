@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
 import com.ed.ed.modules.courses.entities.Course;
+import com.ed.ed.modules.courses.repositories.CourseInMemoryRepository;
 import com.ed.ed.modules.courses.services.CreateCourseService;
 
 public class CreateCourseServiceTest {
@@ -16,7 +17,7 @@ public class CreateCourseServiceTest {
         course.setName("Name test");
         course.setWorkload(100);
 
-        CreateCourseService createCourseService = new CreateCourseService();
+        CreateCourseService createCourseService = new CreateCourseService(new CourseInMemoryRepository());
         Course createCourse  = createCourseService.execute(course);
 
         assertNotNull(createCourse.getId());

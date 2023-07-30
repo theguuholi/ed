@@ -5,12 +5,16 @@ import org.springframework.stereotype.Service;
 
 import com.ed.ed.modules.courses.entities.Course;
 import com.ed.ed.modules.courses.repositories.CourseJpaRepository;
+import com.ed.ed.modules.courses.repositories.ICourseRepository;
 
 @Service
 public class CreateCourseService {
 
-    @Autowired
-    private CourseJpaRepository repository;
+    private ICourseRepository repository;
+
+    public CreateCourseService(ICourseRepository repository) {
+        this.repository = repository;
+    }
 
     public Course execute(Course course) {
         Course existedCourse = this.repository.findByName(course.getName());

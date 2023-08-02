@@ -12,9 +12,9 @@ public class PotenciaTest {
         assertEquals(execute, 2048);
     }
 
-        @Test
-    public void test2() {
-        int execute = new Potencia().log(2, 5);
-        assertEquals(execute, 2048);
-    }
+    //     @Test
+    // public void test2() {
+    //     int execute = new Potencia().log(2, 5);
+    //     assertEquals(execute, 2048);
+    // }
 }

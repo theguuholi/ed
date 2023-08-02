@@ -48,6 +48,7 @@ public class ListaEncadeadaTest {
         listaLigada.add(1);
         listaLigada.add(2);
         listaLigada.add(3);
+        System.out.println(listaLigada.firstNode);
         assertEquals(3, listaLigada.get(2));
     }
 }

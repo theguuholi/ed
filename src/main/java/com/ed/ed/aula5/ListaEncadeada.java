@@ -14,32 +14,33 @@ public class ListaEncadeada {
 
     public void add(int value) {
         var node = new Node(value);
-        if(this.firstNode == null) {
-            this.firstNode = node;
-            length++;
-            return ;
-        }
-        var lastNode = this.firstNode;
-
-        while(lastNode.next != null) {
-            System.out.println(lastNode.toString());
-            lastNode = lastNode.next;
-        }
-        lastNode.next = node;
         length++;
+
+        if (this.firstNode == null) {
+            this.firstNode = node;
+            return;
+        } else {
+            var lastNode = this.firstNode;
+
+            while (lastNode.next != null) {
+                lastNode = lastNode.next;
+            }
+            lastNode.next = node;
+        }
+
     }
 
     public Integer get(int index) {
         if (this.firstNode == null)
             throw new NullPointerException("There is no node");
-        if(index == 0) {
+        if (index == 0) {
             return this.firstNode.value;
         }
 
         var actualLengh = 1;
-        Node node = this.firstNode;
-        while(actualLengh == index) {
-            node = this.firstNode.next;
+        Node node = this.firstNode.next;
+        while (actualLengh != index) {
+            node = node.next;
             actualLengh++;
         }
         return node.value;

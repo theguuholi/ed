@@ -13,8 +13,18 @@ public class ListaEncadeada {
     public Node firstNode = null;
 
     public void add(int value) {
-        var node = new Node(value);
+        add(value, length);
+    }
+
+    public void add(int value, int index) {
         length++;
+
+        if (index == 0) {
+            this.firstNode = new Node(value, this.firstNode);
+            return;
+        }
+
+        var node = new Node(value);
 
         if (this.firstNode == null) {
             this.firstNode = node;

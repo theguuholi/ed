@@ -51,4 +51,13 @@ public class ListaEncadeadaTest {
         System.out.println(listaLigada.firstNode);
         assertEquals(3, listaLigada.get(2));
     }
+
+    @Test
+    void adicionarNoInicio() {
+        var listaLigada = new ListaEncadeada();
+        listaLigada.add(1);
+        listaLigada.add(2);
+        listaLigada.add(3, 0);
+        assertEquals(3, listaLigada.firstNode.value);
+    }
 }

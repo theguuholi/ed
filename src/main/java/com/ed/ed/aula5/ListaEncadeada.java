@@ -38,6 +38,20 @@ public class ListaEncadeada {
                 }
                 lastNode.next = node;
             }
+        } else {
+            var actualIndex = 0;
+            var actualNode = this.firstNode;
+
+            while (actualIndex <= index) {
+                System.out.println(this.firstNode);
+                if (actualIndex == index) {
+                    var node = new Node(value, actualNode);
+                    this.firstNode.next = node;
+                    break;
+                }
+                actualIndex++;
+                actualNode = actualNode.next;
+            }
         }
 
     }

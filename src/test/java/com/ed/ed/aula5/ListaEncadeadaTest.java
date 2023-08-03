@@ -70,4 +70,15 @@ public class ListaEncadeadaTest {
         listaLigada.add(3, 1);
         assertEquals(3, listaLigada.firstNode.next.value);
     }
+
+    @Test
+    void adicionarNoMeioNovamente() {
+        var listaLigada = new ListaEncadeada();
+        listaLigada.add(1);
+        listaLigada.add(2);
+        listaLigada.add(3, 1);
+        listaLigada.add(4, 1);
+        System.out.println(listaLigada.firstNode.toString());
+        assertEquals(4, listaLigada.firstNode.next.value);
+    }
 }

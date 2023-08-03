@@ -42,6 +42,7 @@ public class ListaEncadeadaTest {
         listaLigada.add(2);
         assertEquals(2, listaLigada.get(1));
     }
+
     @Test
     void acessaTerceiroValor() {
         var listaLigada = new ListaEncadeada();
@@ -59,5 +60,14 @@ public class ListaEncadeadaTest {
         listaLigada.add(2);
         listaLigada.add(3, 0);
         assertEquals(3, listaLigada.firstNode.value);
+    }
+
+    @Test
+    void adicionarNoMeio() {
+        var listaLigada = new ListaEncadeada();
+        listaLigada.add(1);
+        listaLigada.add(2);
+        listaLigada.add(3, 1);
+        assertEquals(3, listaLigada.firstNode.next.value);
     }
 }

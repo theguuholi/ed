@@ -17,25 +17,27 @@ public class ListaEncadeada {
     }
 
     public void add(int value, int index) {
-        length++;
 
         if (index == 0) {
             this.firstNode = new Node(value, this.firstNode);
+            length++;
             return;
-        }
+        } else if (index == length) {
+            length++;
 
-        var node = new Node(value);
+            var node = new Node(value);
 
-        if (this.firstNode == null) {
-            this.firstNode = node;
-            return;
-        } else {
-            var lastNode = this.firstNode;
+            if (this.firstNode == null) {
+                this.firstNode = node;
+                return;
+            } else {
+                var lastNode = this.firstNode;
 
-            while (lastNode.next != null) {
-                lastNode = lastNode.next;
+                while (lastNode.next != null) {
+                    lastNode = lastNode.next;
+                }
+                lastNode.next = node;
             }
-            lastNode.next = node;
         }
 
     }

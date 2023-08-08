@@ -12,3 +12,7 @@ Problemas Reais
 3. Pilha de execucao de programas
 4. Estrutura auxiliar para navegacao em arvores
 
+
+Exercicio
+1. Super desafio: Implementar torre de hanoi iterativo com pilha
+2. tilizar balaceamento para resolver expressoes matematicas

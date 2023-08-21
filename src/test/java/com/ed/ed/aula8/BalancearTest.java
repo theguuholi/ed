@@ -82,8 +82,8 @@ public class BalancearTest {
         assertFalse(new Balancear().estaBalanceada("[)"));
     }
 
-    private boolean new Balancear().estaBalanceada(String expressao) {
-        // Implement your logic here to check if the expression is balanced
-        return false; // Replace with actual implementation
-    }
+    // private boolean new Balancear().estaBalanceada(String expressao) {
+    //     // Implement your logic here to check if the expression is balanced
+    //     return false; // Replace with actual implementation
+    // }
 }
